@@ -72,10 +72,11 @@
     justify-content: center;
 
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .my_imgs_1 {
-    margin-right: 60px;
+    margin-right: 40px;
     background-color: red;
     border-radius: 20%;
     overflow: hidden;
@@ -83,8 +84,8 @@
 }
 
 .my_imgs_2 {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
     background-color: green;
 
     border-radius: 20%;
@@ -92,7 +93,7 @@
 }
 
 .my_imgs_3 {
-    margin-left: 60px;
+    margin-left: 40px;
     background-color: blue;
 
     border-radius: 20%;
