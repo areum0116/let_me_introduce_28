@@ -154,3 +154,8 @@ footer {
     color: #fff;
     margin-top: 100px;
 }
+
+#teamIntroduce img {
+    width: 70%;
+    padding-right: 40px;
+}
