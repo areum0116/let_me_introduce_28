@@ -130,12 +130,18 @@
         </div>
     </div>
 
-    <div id="box" class="row g-2">
-        <div id="userid" class="col-sm-2">
-            <input type="text" class="userid" placeholder="닉네임">
+    <div class="container">
+        <h2>닉네임과 댓글 입력하기</h2>
+        <div class="input-container">
+            <label for="nickname">닉네임</label>
+            <input type="text" id="nickname" name="nickname" required>
         </div>
-        <div id="comment" class="col-sm-8">
-            <input type="text" class="comment" placeholder="응원의 한마디">
+        <div class="input-container">
+            <label for="comment">댓글</label>
+            <textarea id="comment" name="comment" required></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="submitComment()">댓글 남기기</button>
         </div>
     </div>
 
