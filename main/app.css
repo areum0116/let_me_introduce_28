@@ -137,7 +137,9 @@
     font-size: 15px;
 }
 
-/*  */
+#comments div{
+    box-shadow: none;
+}
 
 #spartaLogo {
     height: 70px;
