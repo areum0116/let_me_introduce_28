@@ -51,3 +51,12 @@
     outline: none;
     box-shadow: none;
 }
+
+#spartaLogo {
+    height: 70px;
+    background-color: white;
+}
+
+#teamIntroduce {
+    margin-bottom: 50px;
+}
