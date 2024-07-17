@@ -29,8 +29,61 @@
 
             font-size: 20px;
         }
+
         .card-body {
             font-size: 15px;
+        }
+
+        /* 나민수 css */
+        .my_imgs_box {
+            background-color: white;
+            height: 300px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .my_imgs_1 {
+            margin-right: 60px;
+            background-color: red;
+            border-radius: 20%;
+            overflow: hidden;
+
+        }
+
+        .my_imgs_2 {
+            margin-left: 60px;
+            margin-right: 60px;
+            background-color: green;
+
+            border-radius: 20%;
+            overflow: hidden;
+        }
+
+        .my_imgs_3 {
+            margin-left: 60px;
+            background-color: blue;
+
+            border-radius: 20%;
+            overflow: hidden;
+        }
+
+        .my_imgs_1_1 {
+            object-fit: cover;
+        }
+
+        .my_imgs_2_2 {
+            object-fit: cover;
+        }
+
+
+
+        .my_imgs_2_2 {
+            object-fit: cover;
         }
     </style>
 
@@ -40,7 +93,20 @@
 </head>
 
 <body>
-        <!-- code here -->
+    <!-- 나민수 -->
+    <!-- 상세 페이지 상단 이미지 3개 -->
+    <div class="my_imgs_box">
+        <div class="my_imgs_1"> ㅊ
+            <img class="my_imgs_1_1" src="" alt="상세페이지 1번 사진" height="250px" width="200px">
+        </div>
+        <div class="my_imgs_2">
+            <img class="my_imgs_2_2" src="" alt="상세페이지 2번 사진" height="250px" width="200px">
+        </div>
+        <div class="my_imgs_3">
+            <img class="my_imgs_3_3" src="" alt="상세페이지 3번 사진" height="250px" width="200px">
+        </div>
+    </div>
+    <!-- code here -->
     <h2 class="nameh">이름</h2>
     <div class="card">
         <div class="card-header">
