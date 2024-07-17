@@ -19,12 +19,105 @@
     <!-- font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
 
+    <style>
+        /* 기혜 */
+        .mycards {
+            width: 1000px;
+            margin: 30px auto;
+        }
+
+        .polaroid {
+            display: block; /* 링크를 블록 요소로 설정 */
+            border: none;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            position: relative;
+            text-align: left;
+            transition: transform 0.2s;
+            border-radius: 0; /* 모서리를 둥글지 않게 설정 */
+            text-decoration: none; /* 링크 텍스트 데코레이션 제거 */
+            color: inherit; /* 링크 텍스트 색상 상속 */
+        }
+
+        .polaroid:hover {
+            transform: scale(1.05);
+        }
+
+        .polaroid .card-img-top {
+            width: 100%;
+            height: 275px; /* 원하는 높이로 설정하세요 */
+            object-fit: cover; /* 이미지가 카드를 벗어나지 않도록 조정 */
+            border-radius: 0; /* 모서리를 둥글지 않게 설정 */
+        }
+
+        .polaroid .card-body {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .card-title, .card-text {
+            margin: 5px 0;
+        }
+
+        /* 구체적 선택자 사용 */
+        .mycards .polaroid:focus,
+        .mycards .polaroid:active {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+
 </head>
 <body>
 
 
     <!-- code here -->
-
+    <!-- 기혜 -->>
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <a href="https://example.com" class="polaroid">
+                    <img src="areum.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">김아름</h5>
+                        <p class="card-text">INTP</p>
+                        <p class="card-text">아자아자 파이팅입니다!!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://example.com" class="polaroid">
+                    <img src="yunseo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">황윤서</h5>
+                        <p class="card-text">INFJ</p>
+                        <p class="card-text">같이 화이팅입니닷~!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://example.com" class="polaroid">
+                    <img src="minsu.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">나민수</h5>
+                        <p class="card-text">INFP</p>
+                        <p class="card-text">열심히 하겠습니다!!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="https://example.com" class="polaroid">
+                    <img src="kihye.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">김기혜</h5>
+                        <p class="card-text">ENTJ</p>
+                        <p class="card-text">잘 부탁드립니다!!</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
     
 
 
