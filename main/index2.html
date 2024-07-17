@@ -20,6 +20,64 @@
     <!-- font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
     <style>
+        /* 나민수 css */
+        .my_imgs_box {
+            background-color: white;
+            height: 300px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .my_imgs_1 {
+            margin-right: 60px;
+            background-color: red;
+            border-radius: 20%;
+            overflow: hidden;
+
+        }
+
+        .my_imgs_2 {
+            margin-left: 60px;
+            margin-right: 60px;
+            background-color: green;
+
+            border-radius: 20%;
+            overflow: hidden;
+        }
+
+        .my_imgs_3 {
+            margin-left: 60px;
+            background-color: blue;
+
+            border-radius: 20%;
+            overflow: hidden;
+        }
+
+        .my_imgs_1_1 {
+            object-fit: cover;
+        }
+
+        .my_imgs_2_2 {
+            object-fit: cover;
+        }
+
+
+
+        .my_imgs_2_2 {
+            object-fit: cover;
+        }
+
+        /* 황윤서 css */
+        .nameh {
+            text-indent: 1%;
+            text-decoration-line: underline;
+            text-decoration-style: double
+        }
         .card {
             width: 700px;
             height: 130px;
@@ -29,17 +87,32 @@
 
             font-size: 20px;
         }
+
         .card-body {
             font-size: 15px;
         }
     </style>
 
-    <style>
-    </style>
 
 </head>
 
 <body>
+    <!-- 나민수 -->
+    <!-- 상세 페이지 상단 이미지 3개 -->
+    <div class="my_imgs_box">
+        <div class="my_imgs_1">
+            <img class="my_imgs_1_1" src="" alt="상세페이지 1번 사진" height="250px" width="200px">
+        </div>
+        <div class="my_imgs_2">
+            <img class="my_imgs_2_2" src="" alt="상세페이지 2번 사진" height="250px" width="200px">
+        </div>
+        <div class="my_imgs_3">
+            <img class="my_imgs_3_3" src="" alt="상세페이지 3번 사진" height="250px" width="200px">
+        </div>
+    </div>
+
+    <!-- 황윤서 -->
+    <!-- 상세 페이지 하단 5줄 -->
     <h2 class="nameh">이름</h2>
     <div class="card">
         <div class="card-header">
@@ -95,56 +168,6 @@
 
 
     </div>
-
-    <!-- code here -->
-
-    <!-- 기혜 -->
-    <div class="mycards">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <a href="https://example.com" class="polaroid">
-                    <img src="./img/areum.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">김아름</h5>
-                        <p class="card-text">INTP</p>
-                        <p class="card-text">아자아자 파이팅입니다!!</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="https://example.com" class="polaroid">
-                    <img src="./img/yunseo.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">황윤서</h5>
-                        <p class="card-text">INFJ</p>
-                        <p class="card-text">같이 화이팅입니닷~!</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="https://example.com" class="polaroid">
-                    <img src="./img/minsu.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">나민수</h5>
-                        <p class="card-text">INFP</p>
-                        <p class="card-text">열심히 하겠습니다!!</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col">
-                <a href="https://example.com" class="polaroid">
-                    <img src="./img/kihye.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">김기혜</h5>
-                        <p class="card-text">ENTJ</p>
-                        <p class="card-text">잘 부탁드립니다!!</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    
-
 
     <!-- JS, JQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
