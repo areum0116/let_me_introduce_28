@@ -24,6 +24,39 @@
         href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@100..900&family=Poor+Story&family=Yeon+Sung&display=swap"
         rel="stylesheet">
 
+
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            // https://firebase.google.com/?hl=ko
+            // 파이어베이스에 접속한 후 프로젝트 설정에 들어갑니다.
+            // 본인 firebaseConfig 내용으로 설정해 줍니다.
+            apiKey: "AIzaSyD6oYsdJJ03Xfnzri2MJthop6vq_czVPaE",
+            authDomain: "nbcamp-9f6c7.firebaseapp.com",
+            projectId: "nbcamp-9f6c7",
+            storageBucket: "nbcamp-9f6c7.appspot.com",
+            messagingSenderId: "976294141381",
+            appId: "1:976294141381:web:4e95762f4cc77dc512bfac",
+            measurementId: "G-24PRPL29N5"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 데이터 추가
+        
+
+        // 데이터 읽기 및 카드 생성
+        
+
+    </script>
+
 </head>
 
 <body>
@@ -80,12 +113,12 @@
         </div>
     </div>
 
-    
-    
+
+
     <!-- 기혜 -->
     <div class="mycards">
         <h2 class="fw-bold mx-3 mb-4 mt-3">멤버들을 소개합니다!</h2>
-        
+
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <a href="./areum.html" class="polaroid">
@@ -130,6 +163,50 @@
         </div>
     </div>
 
+    <div class="container">
+        <h2>닉네임과 댓글 입력하기</h2>
+        <div class="input-container">
+            <label for="nickname">닉네임</label>
+            <input type="text" id="nickname" name="nickname" required>
+        </div>
+        <div class="input-container">
+            <label for="comment">댓글</label>
+            <textarea id="comment" name="comment" required></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="submitComment()">댓글 남기기</button>
+        </div>
+    </div>
+
+    <div class="mycards" id="comments">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title" id="userId">test</h5>
+                <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">2024-07-17</small>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title" id="userId">test</h5>
+                <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">2024-07-17</small>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title" id="userId">test</h5>
+                <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">2024-07-17</small>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-danger bg-gradient">
         <small>
