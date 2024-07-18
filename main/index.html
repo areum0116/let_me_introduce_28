@@ -112,19 +112,19 @@
     <!-- 미세먼지 -->
     <script>
         $(document).ready(function () {
-        let url = "http://spartacodingclub.shop/sparta_api/seoulair";
-        fetch(url).then(res => res.json()).then(data => {
-            let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM'];
-            let msgElement = $('#msg');
-            msgElement.text(mise);
-            
-            if (mise === '좋음') {
-                msgElement.css('color', 'green');
-            } else if (mise === '나쁨') {
-                msgElement.css('color', 'red');
-            }
-        })
-    });
+            let url = "http://spartacodingclub.shop/sparta_api/seoulair";
+            fetch(url).then(res => res.json()).then(data => {
+                let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM'];
+                let msgElement = $('#msg');
+                msgElement.text(mise);
+
+                if (mise === '좋음') {
+                    msgElement.css('color', 'green');
+                } else if (mise === '나쁨') {
+                    msgElement.css('color', 'red');
+                }
+            })
+        });
     </script>
     <script>
         $(document).ready(function () {
@@ -164,24 +164,15 @@
         </div>
     </nav>
 
-    
-    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">현재 서울의 날씨</div>
-        <div class="card-body">
-          <h5 class="card-title">Primary card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
 
-
-    <div class="sticky-lg-top">
-        <div class="fs-5">
-            현재 서울의 미세먼지 : <span class="fs-5 " id="msg"></span>
+    <div class="card mb-3 sticky-lg-top text-start" id="weatherBox" style="max-width: 14rem;">
+        <div class="">
+            <div class="card-header">현재 서울의 날씨</div>
+            <div class="card-body">
+                <p class="card-text fs-5">미세먼지 : <span class="fs-5 " id="msg"></span></p>
+                <p class="card-text fs-5">온도 : <span class="fs-5" id="temmmp"></span> 도</p>
+            </div>
         </div>
-        <div class="fs-5">
-            현재 서울의 온도 : <span class="fs-5" id="temmmp"></span>도
-        </div>
-        
     </div>
 
     <h1 class="display-2 text-center mt-2 mb-2">🏃‍♀️ 28조는 8282 🏃‍♂️</h1>
