@@ -50,10 +50,32 @@
         const db = getFirestore(app);
 
         // 데이터 추가
-        
+
 
         // 데이터 읽기 및 카드 생성
-        
+        $("#comments").empty();
+        const querySnapshot = await getDocs(collection(db, "comments"));
+
+        querySnapshot.forEach((doc) => {
+
+            let userId = doc.data().userId;
+            let comment = doc.data().comment
+
+            let temp_html = `
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title" id="userId">${userId}</h5>
+                        <p class="card-text" id="comment">${comment}</p>
+                </div>
+                <div class="card-footer">
+                    <p>내일배움캠프</p>
+                </div>
+            </div>`;
+            // 문서의 title, comment, image, star 필드에서 데이터를 추출한 변수명을 갖고,
+            // tempHtml 문자열에 각 데이터를 포함한 카드의 HTML 코드를 생성하세요.
+
+            $("#comments").append(temp_html);
+        });
 
     </script>
 
@@ -163,8 +185,8 @@
         </div>
     </div>
 
+    <h2 class="text-center">응원의 한 줄!</h2>
     <div class="container">
-        <h2>응원의 한줄!</h2>
         <div class="input-container">
             <label for="nickname">닉네임</label>
             <input type="text" id="nickname" name="nickname" required>
@@ -185,7 +207,7 @@
                 <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">2024-07-17</small>
+                <p>내일배움캠프</p>
             </div>
         </div>
         <div class="card mb-3">
@@ -194,7 +216,7 @@
                 <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">2024-07-17</small>
+                <p>내일배움캠프</p>
             </div>
         </div>
         <div class="card mb-3">
@@ -203,7 +225,7 @@
                 <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">2024-07-17</small>
+                <p>내일배움캠프</p>
             </div>
         </div>
     </div>
