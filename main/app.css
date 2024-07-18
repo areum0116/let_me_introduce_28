@@ -1,3 +1,5 @@
+
+/* 폰트 적용 */
 * {
     font-family: "Poor Story", system-ui;
     font-weight: 400;
@@ -136,6 +138,8 @@
     font-size: 15px;
 }
 
+/* 김아름 */
+
 #comments div{
     box-shadow: none;
 }
@@ -164,6 +168,10 @@ footer {
 #teamIntroduce img {
     width: 70%;
     padding-right: 40px;
+}
+
+.container {
+    display: none;
 }
 
 /* 김기혜 댓글 */
