@@ -1,3 +1,5 @@
+
+/* 폰트 적용 */
 * {
     font-family: "Poor Story", system-ui;
     font-weight: 400;
@@ -136,6 +138,8 @@
     font-size: 15px;
 }
 
+/* 김아름 */
+
 #comments div{
     box-shadow: none;
 }
@@ -143,6 +147,10 @@
 h2.comment {
     margin-top: 100px;
     margin-bottom: 30px;
+}
+
+h2.comment:hover {
+    cursor: pointer;
 }
 
 #spartaLogo {
@@ -164,6 +172,10 @@ footer {
 #teamIntroduce img {
     width: 70%;
     padding-right: 40px;
+}
+
+.container {
+    display: none;
 }
 
 /* 김기혜 댓글 */

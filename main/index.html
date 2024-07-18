@@ -52,7 +52,7 @@
 
         // 데이터 추가
         $("#addBtn").click(async function () {
-            let userId = $('#nickname').val();
+            let userId = $('#userId').val();
             let comment = $('#comment').val();
 
             try {
@@ -79,7 +79,7 @@
             let temp_html = `
             <div class="card mb-3">
                 <div class="card-body">
-                        <p class="card-text" id="comment">${comment}</p>
+                    <p class="card-text" id="comment">${comment}</p>
                 </div>
                 <div class="card-footer" id="userId">
                     ${userId}
@@ -89,9 +89,35 @@
             $("#comments").append(temp_html);
         });
 
+        // 닉네임 10글자 제한하기  --나민수
+        $('#userId').keyup(function (e) {
+            let nickname = $(this).val();
 
-        // for문으로 댓글 3번 반복
+            // 글자수 제한
+            if (nickname.length > 10) {
+                // 10자 부터는 타이핑 되지 않는 
+                $(this).val($(this).val().substring(0, 10));
+                // 10자 넘으면 알림창 
+                alert('글자수는 10자까지 입력 가능합니다.');
+            };
+        });
+    </script>
 
+    <!-- 댓글창 toggle -->
+    <script>
+        function openclose() {
+            $(".container").toggle();
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            let url = "http://spartacodingclub.shop/sparta_api/seoulair";
+            fetch(url).then(res => res.json()).then(data => {
+                let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM']
+                $('#msg').text(mise)
+            })
+        })
     </script>
 
 </head>
@@ -105,6 +131,12 @@
                 <a class="text-decoration-none text-light fs-4" href="https://spartacodingclub.kr/" target="_blank">
                     스파르타 코딩 클럽
                 </a>
+
+            </div>
+            <div class="col">
+                <div class="text-decoration-none text-light fs-5">
+                    현재 서울의 미세먼지 : <span class="text-decoration-none text-light fs-5" id="msg">나쁨</span>
+                </div>
             </div>
 
             <div class="col">
@@ -200,11 +232,12 @@
         </div>
     </div>
 
-    <h2 class="text-center comment">응원의 한 줄 남기기</h2>
+    <h2 class="text-center comment" onclick="openclose()">응원의 한 줄 남기기</h2>
+    
     <div class="container">
         <div class="input-container">
-            <label for="nickname">닉네임</label>
-            <input type="text" id="nickname" name="nickname" required>
+            <label for="userId">닉네임</label>
+            <input type="text" id="userId" name="userId" required>
         </div>
         <div class="input-container">
             <label for="comment">댓글</label>
@@ -218,10 +251,10 @@
     <div class="mycards" id="comments">
         <div class="card mb-3">
             <div class="card-body">
-                <p class="card-text" id="comment">test</p>
+                <p class="card-text" id="comment">for문 테스트용 댓글입니다.</p>
             </div>
             <div class="card-footer" id="userId">
-                for문용 테스트 댓글입니다.
+                test
             </div>
         </div>
     </div>
