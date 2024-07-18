@@ -113,12 +113,19 @@
     <!-- 미세먼지 -->
     <script>
         $(document).ready(function () {
-            let url = "http://spartacodingclub.shop/sparta_api/seoulair";
-            fetch(url).then(res => res.json()).then(data => {
-                let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM']
-                $('#msg').text(mise)
-            })
+        let url = "http://spartacodingclub.shop/sparta_api/seoulair";
+        fetch(url).then(res => res.json()).then(data => {
+            let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM'];
+            let msgElement = $('#msg');
+            msgElement.text(mise);
+            
+            if (mise === '좋음') {
+                msgElement.css('color', 'green');
+            } else if (mise === '나쁨') {
+                msgElement.css('color', 'red');
+            }
         })
+    });
     </script>
 
 </head>
