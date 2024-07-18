@@ -27,15 +27,13 @@
 
     <script type="module">
 
+        // Firebase 연동 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
         import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
         import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
         import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
         const firebaseConfig = {
-            // https://firebase.google.com/?hl=ko
-            // 파이어베이스에 접속한 후 프로젝트 설정에 들어갑니다.
-            // 본인 firebaseConfig 내용으로 설정해 줍니다.
             apiKey: "AIzaSyD6oYsdJJ03Xfnzri2MJthop6vq_czVPaE",
             authDomain: "nbcamp-9f6c7.firebaseapp.com",
             projectId: "nbcamp-9f6c7",
@@ -88,28 +86,25 @@
             $("#comments").append(temp_html);
         });
 
-        // 닉네임 10글자 제한하기  --나민수
+        // 닉네임 10글자 제한
         $('#userId').keyup(function (e) {
             let nickname = $(this).val();
 
-            // 글자수 제한
             if (nickname.length > 10) {
-                // 10자 부터는 타이핑 되지 않는 
                 $(this).val($(this).val().substring(0, 10));
-                // 10자 넘으면 알림창 
                 alert('글자수는 10자까지 입력 가능합니다.');
             };
         });
     </script>
 
-    <!-- 댓글창 toggle -->
+    <!-- 댓글창 toggle 기능-->
     <script>
         function openclose() {
             $(".container").toggle();
         }
     </script>
 
-    <!-- 미세먼지 -->
+    <!-- 서울 미세먼지 정보 -->
     <script>
         $(document).ready(function () {
             let url = "http://spartacodingclub.shop/sparta_api/seoulair";
@@ -126,6 +121,8 @@
             })
         });
     </script>
+
+    <!-- 서울 온도 정보 -->
     <script>
         $(document).ready(function () {
             let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
@@ -135,19 +132,17 @@
             })
         })
     </script>
-
 </head>
 
 <body>
-    <!-- navbar -->
+
+    <!-- 네비게이션 바 -->
     <nav class="navbar-light bg-danger bg-gradient mb-5">
         <div class="container-fluid row align-items-center text-center">
-
             <div class="col">
                 <a class="text-decoration-none text-light fs-4" href="https://spartacodingclub.kr/" target="_blank">
                     스파르타 코딩 클럽
                 </a>
-
             </div>
 
             <div class="col">
@@ -164,7 +159,7 @@
         </div>
     </nav>
 
-
+    <!-- 현재 서울 날씨 표시 창 -->
     <div class="card mb-3 fixed-top text-center border-info" id="weatherBox" style="max-width: 12rem;">
         <div class="card-header border-info">현재 서울의 날씨</div>
         <div class="card-body">
@@ -173,12 +168,16 @@
         </div>
     </div>
 
+    <!-- 팀 이름 -->
     <h1 class="display-2 text-center mt-2 mb-2">🏃‍♀️ 28조는 8282 🏃‍♂️</h1>
 
+    <!-- 팀 설명 -->
     <div class="row justify-content-center mt-5" id="teamIntroduce">
+
         <div class="col-lg-5 text-end">
             <img src="./img/zap.png" alt="zap에 모여있는 사진" class="rounded-3 d-none d-lg-inline">
         </div>
+
         <div class="col-lg-5">
             <h4 class="fw-bold">저희 조는요!</h4>
             <p>
@@ -202,12 +201,9 @@
         </div>
     </div>
 
-
-
-    <!-- 기혜 -->
+    <!-- 멤버 소개 섹션 -->
     <div class="mycards">
         <h2 class="fw-bold mx-3 mb-4 mt-3">멤버들을 소개합니다!</h2>
-
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <a href="./areum.html" class="polaroid">
@@ -252,6 +248,8 @@
         </div>
     </div>
 
+
+    <!-- 댓글창 구현 -->
     <h2 class="text-center comment" onclick="openclose()">응원의 한 줄 남기기 💌</h2>
 
     <div class="container">
