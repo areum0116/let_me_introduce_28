@@ -50,7 +50,22 @@
         const db = getFirestore(app);
 
         // 데이터 추가
+        $("#addBtn").click(async function () {
+            let userId = $('#nickname').val();
+            let comment = $('#comment').val();
 
+            try {
+                const docRef = await addDoc(collection(db, "comments"), {
+                    'userId': userId,
+                    'comment': comment,
+                });
+
+                alert("댓글이 추가 되었습니다!");
+                window.location.reload();
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+        });
 
         // 데이터 읽기 및 카드 생성
         $("#comments").empty();
