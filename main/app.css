@@ -140,6 +140,10 @@
     box-shadow: none;
 }
 
+h2.comment {
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
 
 #spartaLogo {
     height: 70px;
