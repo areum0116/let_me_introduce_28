@@ -68,7 +68,7 @@
                         <p class="card-text" id="comment">${comment}</p>
                 </div>
                 <div class="card-footer">
-                    <p>내일배움캠프</p>
+                    내일배움캠프
                 </div>
             </div>`;
             // 문서의 title, comment, image, star 필드에서 데이터를 추출한 변수명을 갖고,
@@ -185,7 +185,7 @@
         </div>
     </div>
 
-    <h2 class="text-center">응원의 한 줄!</h2>
+    <h2 class="text-center mt-5 comment">응원의 한 줄 남기기</h2>
     <div class="container">
         <div class="input-container">
             <label for="nickname">닉네임</label>
@@ -196,7 +196,7 @@
             <textarea id="comment" name="comment" required></textarea>
         </div>
         <div class="button-container">
-            <button onclick="submitComment()">댓글 남기기</button>
+            <button type="button" id="addBtn">댓글 남기기</button>
         </div>
     </div>
 
