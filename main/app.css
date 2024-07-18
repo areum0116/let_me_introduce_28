@@ -185,6 +185,10 @@ footer {
     margin: 100px 0 0 30px;
 }
 
+@media only screen and (max-width: 1000px){
+    #weatherBox {display: none;}
+}
+
 /* 김기혜 댓글 */
 .container {
     max-width: 700px;
