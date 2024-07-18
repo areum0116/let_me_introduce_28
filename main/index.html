@@ -67,7 +67,6 @@
             }
         });
 
-
         // 데이터 읽기 및 댓글 생성
         const querySnapshot = await getDocs(collection(db, "comments"));
 
@@ -127,6 +126,15 @@
         })
     });
     </script>
+    <script>
+        $(document).ready(function () {
+            let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
+            fetch(url).then(res => res.json()).then(data => {
+                let temp = data['temp']
+                $('#temmmp').text(temp)
+            })
+        })
+    </script>
 
 </head>
 
@@ -170,6 +178,10 @@
         <div class="fs-5">
             현재 서울의 미세먼지 : <span class="fs-5 " id="msg"></span>
         </div>
+        <div class="fs-5">
+            현재 서울의 온도 : <span class="fs-5" id="temmmp"></span>도
+        </div>
+        
     </div>
 
     <h1 class="display-2 text-center mt-2 mb-2">🏃‍♀️ 28조는 8282 🏃‍♂️</h1>
