@@ -48,6 +48,7 @@
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
+        
 
         // 데이터 추가
         $("#addBtn").click(async function () {
@@ -67,7 +68,8 @@
             }
         });
 
-        // 데이터 읽기 및 카드 생성
+
+        // 데이터 읽기 및 댓글 생성
         $("#comments").empty();
         const querySnapshot = await getDocs(collection(db, "comments"));
 
@@ -86,8 +88,6 @@
                     내일배움캠프
                 </div>
             </div>`;
-            // 문서의 title, comment, image, star 필드에서 데이터를 추출한 변수명을 갖고,
-            // tempHtml 문자열에 각 데이터를 포함한 카드의 HTML 코드를 생성하세요.
 
             $("#comments").append(temp_html);
         });
