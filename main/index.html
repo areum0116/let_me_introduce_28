@@ -25,7 +25,6 @@
         rel="stylesheet">
 
 
-
     <script type="module">
 
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
@@ -110,6 +109,7 @@
         }
     </script>
 
+    <!-- 미세먼지 -->
     <script>
         $(document).ready(function () {
             let url = "http://spartacodingclub.shop/sparta_api/seoulair";
@@ -133,11 +133,6 @@
                 </a>
 
             </div>
-            <div class="col">
-                <div class="text-decoration-none text-light fs-5">
-                    현재 서울의 미세먼지 : <span class="text-decoration-none text-light fs-5" id="msg">나쁨</span>
-                </div>
-            </div>
 
             <div class="col">
                 <img src="https://assets.website-files.com/6402d516720f9140cb4c2fd8/6402d516720f91a0d04c3236_scc_logo_main.png"
@@ -152,6 +147,12 @@
             </div>
         </div>
     </nav>
+
+    <div class="col sticky-lg-top">
+        <div class="fs-5">
+            현재 서울의 미세먼지 : <span class="fs-5" id="msg">나쁨</span>
+        </div>
+    </div>
 
     <h1 class="display-2 text-center mt-2 mb-2">🏃‍♀️ 28조는 8282 🏃‍♂️</h1>
 
@@ -232,8 +233,8 @@
         </div>
     </div>
 
-    <h2 class="text-center comment" onclick="openclose()">응원의 한 줄 남기기</h2>
-    
+    <h2 class="text-center comment" onclick="openclose()">응원의 한 줄 남기기 💌</h2>
+
     <div class="container">
         <div class="input-container">
             <label for="userId">닉네임</label>
@@ -251,7 +252,7 @@
     <div class="mycards" id="comments">
         <div class="card mb-3">
             <div class="card-body">
-                <p class="card-text" id="comment">for문 테스트용 댓글입니다.</p>
+                <p class="card-text" id="comment">테스트용 댓글입니다.</p>
             </div>
             <div class="card-footer" id="userId">
                 test
