@@ -113,19 +113,12 @@
     <!-- 미세먼지 -->
     <script>
         $(document).ready(function () {
-        let url = "http://spartacodingclub.shop/sparta_api/seoulair";
-        fetch(url).then(res => res.json()).then(data => {
-            let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM'];
-            let msgElement = $('#msg');
-            msgElement.text(mise);
-            
-            if (mise === '좋음') {
-                msgElement.css('color', 'green');
-            } else if (mise === '나쁨') {
-                msgElement.css('color', 'red');
-            }
+            let url = "http://spartacodingclub.shop/sparta_api/seoulair";
+            fetch(url).then(res => res.json()).then(data => {
+                let mise = data['RealtimeCityAir']['row'][0]['IDEX_NM']
+                $('#msg').text(mise)
+            })
         })
-    });
     </script>
 
 </head>
@@ -158,7 +151,7 @@
 
     <div class="sticky-lg-top">
         <div class="fs-5">
-            현재 서울의 미세먼지 : <span class="fs-5" id="msg"></span>
+            현재 서울의 미세먼지 : <span class="fs-5 " id="msg"></span>
         </div>
     </div>
 
