@@ -70,6 +70,7 @@
 
 
         // 데이터 읽기 및 댓글 생성
+        $("#comments").empty();
         const querySnapshot = await getDocs(collection(db, "comments"));
 
         querySnapshot.forEach((doc) => {
@@ -80,19 +81,29 @@
             let temp_html = `
             <div class="card mb-3">
                 <div class="card-body">
+                    <h5 class="card-title" id="userId">${userId}</h5>
                         <p class="card-text" id="comment">${comment}</p>
                 </div>
-                <div class="card-footer" id="userId">
-                    ${userId}
+                <div class="card-footer">
+                    내일배움캠프
                 </div>
             </div>`;
 
             $("#comments").append(temp_html);
         });
 
+        // 닉네임 10글자 제한하기  --나민수
+        $('#nickname').keyup(function (e) {
+            let nickname = $(this).val();
 
-        // for문으로 댓글 3번 반복
-
+            // 글자수 제한
+            if (nickname.length > 10) {
+                // 10자 부터는 타이핑 되지 않는 
+                $(this).val($(this).val().substring(0, 10));
+                // 10자 넘으면 알림창 
+                alert('글자수는 10자까지 입력 가능합니다.');
+            };
+        });
     </script>
 
 </head>
@@ -219,10 +230,29 @@
     <div class="mycards" id="comments">
         <div class="card mb-3">
             <div class="card-body">
-                <p class="card-text" id="comment">test</p>
+                <h5 class="card-title" id="userId">test</h5>
+                <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
             </div>
-            <div class="card-footer" id="userId">
-                for문용 테스트 댓글입니다.
+            <div class="card-footer">
+                <p>내일배움캠프</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title" id="userId">test</h5>
+                <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
+            </div>
+            <div class="card-footer">
+                <p>내일배움캠프</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title" id="userId">test</h5>
+                <p class="card-text" id="comment">아주 멋지네요!!! 따봉!!!</p>
+            </div>
+            <div class="card-footer">
+                <p>내일배움캠프</p>
             </div>
         </div>
     </div>
