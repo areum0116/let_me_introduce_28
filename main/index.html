@@ -52,7 +52,7 @@
 
         // 데이터 추가
         $("#addBtn").click(async function () {
-            let userId = $('#nickname').val();
+            let userId = $('#userId').val();
             let comment = $('#comment').val();
 
             try {
@@ -70,7 +70,6 @@
 
 
         // 데이터 읽기 및 댓글 생성
-        $("#comments").empty();
         const querySnapshot = await getDocs(collection(db, "comments"));
 
         querySnapshot.forEach((doc) => {
@@ -81,11 +80,10 @@
             let temp_html = `
             <div class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title" id="userId">${userId}</h5>
-                        <p class="card-text" id="comment">${comment}</p>
+                    <p class="card-text" id="comment">${comment}</p>
                 </div>
-                <div class="card-footer">
-                    내일배움캠프
+                <div class="card-footer" id="userId">
+                    ${userId}
                 </div>
             </div>`;
 
@@ -93,7 +91,7 @@
         });
 
         // 닉네임 10글자 제한하기  --나민수
-        $('#nickname').keyup(function (e) {
+        $('#userId').keyup(function (e) {
             let nickname = $(this).val();
 
             // 글자수 제한
@@ -221,8 +219,8 @@
     <h2 class="text-center comment" onclick="openclose()">응원의 한 줄 남기기</h2>
     <div class="container">
         <div class="input-container">
-            <label for="nickname">닉네임</label>
-            <input type="text" id="nickname" name="nickname" required>
+            <label for="userId">닉네임</label>
+            <input type="text" id="userId" name="userId" required>
         </div>
         <div class="input-container">
             <label for="comment">댓글</label>
