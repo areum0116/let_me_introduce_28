@@ -182,7 +182,7 @@ footer {
 
 #weatherBox {
     box-shadow: none;
-    margin: 0 0 0 20px;
+    margin: 0 0 auto 20px;
 }
 
 /* 김기혜 댓글 */
