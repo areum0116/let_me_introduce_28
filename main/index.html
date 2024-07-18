@@ -24,6 +24,39 @@
         href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@100..900&family=Poor+Story&family=Yeon+Sung&display=swap"
         rel="stylesheet">
 
+
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            // https://firebase.google.com/?hl=ko
+            // 파이어베이스에 접속한 후 프로젝트 설정에 들어갑니다.
+            // 본인 firebaseConfig 내용으로 설정해 줍니다.
+            apiKey: "AIzaSyD6oYsdJJ03Xfnzri2MJthop6vq_czVPaE",
+            authDomain: "nbcamp-9f6c7.firebaseapp.com",
+            projectId: "nbcamp-9f6c7",
+            storageBucket: "nbcamp-9f6c7.appspot.com",
+            messagingSenderId: "976294141381",
+            appId: "1:976294141381:web:4e95762f4cc77dc512bfac",
+            measurementId: "G-24PRPL29N5"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 데이터 추가
+        
+
+        // 데이터 읽기 및 카드 생성
+        
+
+    </script>
+
 </head>
 
 <body>
