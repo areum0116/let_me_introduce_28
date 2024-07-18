@@ -151,6 +151,8 @@ h2.comment {
 
 h2.comment:hover {
     cursor: pointer;
+    transform: scale(1.05);
+    transition: transform .2s;
 }
 
 #spartaLogo {
